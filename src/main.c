@@ -6,7 +6,7 @@
 #include "ai.h"
 #include "game.h"
 
-int main(int argc, char **argv){
+int main(int argc, char *argv[]){
 
 	void InitBoard(int Board[MAXBOARD][MAXBOARD][NOFPOS]);
 	int Board[MAXBOARD][MAXBOARD][NOFPOS];
