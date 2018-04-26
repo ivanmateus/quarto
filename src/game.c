@@ -285,7 +285,7 @@ void Test(int Board[MAXBOARD][MAXBOARD][NOFPOS]){
 			PlayedNumbers[5] = 4;
 			PrintBoard(Board);
 
-			printf("\nChecking for the optimized position:\n\n");
+			printf("\nSearching for the optimal position to number 3 (0011):\n\n");
 
 			Position = AIMovewMiniMax(Board, 3, NumberArray, PlayedNumbers, NofPNumbers);
 			PutNumber(Board, Position, 3);
