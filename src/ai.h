@@ -12,7 +12,7 @@
 #define AI -1
 
 int NotPlayedNumber(int NumberArray[MAXBOARD*MAXBOARD], int PlayedNumbers[MAXBOARD*MAXBOARD]);
-int BestMove(int Board[MAXBOARD][MAXBOARD][NOFPOS], int NumberArray[MAXBOARD*MAXBOARD], int NofPlydNbrs, int PlayedNumbers[MAXBOARD*MAXBOARD], int CurrentPlayer);
+int MiniMax(int Board[MAXBOARD][MAXBOARD][NOFPOS], int NumberArray[MAXBOARD*MAXBOARD], int NofPlydNbrs, int PlayedNumbers[MAXBOARD*MAXBOARD], int CurrentPlayer);
 void GetEmptyPosition(int Board[MAXBOARD][MAXBOARD][NOFPOS], int EmptyPosits[MAXBOARD*MAXBOARD]);
 void NotPlayedArray(int NumberArray[MAXBOARD*MAXBOARD], int PlayedNumbers[MAXBOARD*MAXBOARD], int NotPlayed[MAXBOARD*MAXBOARD]);
 void ConvertToArray(int NumberArray[NOFPOS], int Number);

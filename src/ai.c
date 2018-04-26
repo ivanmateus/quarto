@@ -31,7 +31,7 @@ int NotPlayedNumber(int NumberArray[MAXBOARD*MAXBOARD], int PlayedNumbers[MAXBOA
 	return NotPlayed;
 }
 
-int BestMove(int Board[MAXBOARD][MAXBOARD][NOFPOS], int NumberArray[MAXBOARD*MAXBOARD], int NofPlydNbrs, int PlayedNumbers[MAXBOARD*MAXBOARD], int CurrentPlayer){
+int MiniMax(int Board[MAXBOARD][MAXBOARD][NOFPOS], int NumberArray[MAXBOARD*MAXBOARD], int NofPlydNbrs, int PlayedNumbers[MAXBOARD*MAXBOARD], int CurrentPlayer){
 
     int Winner = AnyWinner(Board, (-1)*CurrentPlayer);
     int Counter0 = 0;
@@ -52,7 +52,7 @@ int BestMove(int Board[MAXBOARD][MAXBOARD][NOFPOS], int NumberArray[MAXBOARD*MAX
 				Convert2BinAndPut(Board, Counter0, Counter1, NPlayed);
 				PlayedNumbers[NofPlydNbrs] = NPlayed;
 				++NofPlydNbrs;
-	            int TempScore = (-1)*BestMove(Board, NumberArray, NofPlydNbrs, PlayedNumbers, (-1)*CurrentPlayer);
+	            int TempScore = (-1)*MiniMax(Board, NumberArray, NofPlydNbrs, PlayedNumbers, (-1)*CurrentPlayer);
 				--NofPlydNbrs;
 				PlayedNumbers[NofPlydNbrs] = EMPTY;
 	        	Convert2BinAndPut(Board, Counter0, Counter1, EMPTY);
@@ -324,7 +324,7 @@ int AIMovewMiniMax(int Board[MAXBOARD][MAXBOARD][NOFPOS], int Number, int Number
 				Convert2BinAndPut(Board, Counter0, Counter1, Number);
 				PlayedNumbers[NofPlydNbrs] = Number;
 				++NofPlydNbrs;
-	            TempScore = (-1)*BestMove(Board, NumberArray, NofPlydNbrs, PlayedNumbers, (-1)*AI);
+	            TempScore = (-1)*MiniMax(Board, NumberArray, NofPlydNbrs, PlayedNumbers, (-1)*AI);
 				--NofPlydNbrs;
 				PlayedNumbers[NofPlydNbrs] = EMPTY;
 	        	Convert2BinAndPut(Board, Counter0, Counter1, EMPTY);

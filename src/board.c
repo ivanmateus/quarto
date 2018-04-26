@@ -291,6 +291,7 @@ void PutNumber(int Board[MAXBOARD][MAXBOARD][NOFPOS], int Position, int Number){
 
 	Convert2BinAndPut(Board, i, j, Number);
 }
+
 int CheckAndPut(int Board[MAXBOARD][MAXBOARD][NOFPOS], int PlayedNumbers[MAXBOARD*MAXBOARD], int Moves[MAXBOARD*MAXBOARD], int CurrentPlayer, int Number){
 
 	char Position = '0';
