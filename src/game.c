@@ -258,3 +258,36 @@ void Quarto(int Board[MAXBOARD][MAXBOARD][NOFPOS]){
       	printf("\n\n");
     }
 }
+
+void Test(int Board[MAXBOARD][MAXBOARD][NOFPOS]){
+
+			int NumberArray[MAXBOARD*MAXBOARD];
+			int PlayedNumbers[MAXBOARD*MAXBOARD];
+			int Position = -1;
+			int NofPNumbers = 0;
+			NArray(NumberArray);
+			InitArray(PlayedNumbers);
+
+			printf("Test input:\n\n");
+
+			PutNumber(Board, 1, 1);
+			PutNumber(Board, 2, 12);
+			PutNumber(Board, 9, 5);
+			PutNumber(Board, 15, 6);
+			PutNumber(Board, 11, 2);
+			PutNumber(Board, 14, 4);
+			NofPNumbers = 6;
+			PlayedNumbers[0] = 1;
+			PlayedNumbers[1] = 2;
+			PlayedNumbers[2] = 5;
+			PlayedNumbers[3] = 6;
+			PlayedNumbers[4] = 12;
+			PlayedNumbers[5] = 4;
+			PrintBoard(Board);
+
+			printf("\nChecking for the optimized position:\n\n");
+
+			Position = AIMovewMiniMax(Board, 3, NumberArray, PlayedNumbers, NofPNumbers);
+			PutNumber(Board, Position, 3);
+			PrintBoard(Board);
+}
