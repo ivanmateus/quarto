@@ -111,7 +111,6 @@ void NotPlayedArray(int NumberArray[MAXBOARD*MAXBOARD], int PlayedNumbers[MAXBOA
 		}
 		if((PlayedNumbers[Counter1] == -1) || (Counter1 == MAXBOARD*MAXBOARD)){
 			NotPlayed[Counter2] = NPlayed;
-			printf("nplayed %d\n", NPlayed);
 			++Counter2;
 		}
 		++Counter0;
