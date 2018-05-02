@@ -4,7 +4,7 @@
 # Compilando o programa
 Para compilar o programa é necessário ter o GCC instalado no micro utilizado. Após isso, abra o terminal, vá para o diretório em que os arquivos acima estão salvos e digite o seguinte comando:
 
-$ gcc main.c board.c game.c player.c ai.c -o main}
+$ gcc main.c board.c game.c player.c ai.c -o main
 
 Para compilar usando o Code::Blocks, abra um projeto vazio 'empty project', então vá em Project -> Add files..., selecione todos os arquivos .c e .h, clique em 'Open' e em 'Ok' na janela seguinte. Por fim,  tecle Ctrl+F9 para compilar o programa.
 
